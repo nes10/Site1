@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tour Agency</title>
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class='start' onLoad='push();'>
+
+    <header>
+
+        <div class='logo'><img src='images/logo.png' alt='Лого'></div>
+
+        <div class='tm'>
+            <span><i class="material-icons">access_time</i></span>
+            <span>9:00 - 18:00</span>
+        </div>
+
+        <div class='tel'>
+            <span><i class="material-icons">smartphone</i></span>
+            <span>+375 29 111 11 11</span>
+        </div>
+
+        <div class='srh'>
+            <form action='#'>
+                <input type='search' name='n6' id='in6' list='mydata' autocomplete='off' placeholder="Поиск">
+                <datalist id='mydata'>
+                    <option value='Испания' label='Канарские острова'>
+                    <option value='Турция' label='Анталия'>
+                    <option value='Египет' label='Хургада'>
+                </datalist>
+                <button><i class="material-icons">search</i></button>
+            </form>
+        </div>
+
+    </header>
+
+
+
+
+                    <!-- МЕНЮ -->
+    <nav>
+        
+        <a href='#a1'>О компании</a>
+        <a href='#a2'>Наши туры</a>
+        <a href='#a3'>Горящие путевки</a>
+        <a href='#a4'>Контакты</a>
+
+
+    </nav>
+    
+
+
+                                <!-- ВИДЕО -->
+    <main>
+
+        <section>
+            <video id='intro' preload='auto' width='100%'>
+                <source src='media/anytour.mp4' type='video/mp4'>
+                    <source src='media/anytour.webm' type='video/webm'>
+                        <source src='media/anytour.ogg' type='video/ogg'>
+
+            <p>Браузер не поддерживает данные видеоформат<a href='media/anytour.mp4'>Скачать файл</a></p>
+                
+
+            </video>
+
+        </section>
+
+        <script>
+            intro.muted = true;
+            // intro.addEventListener('load',push);
+            function push() {
+                if (!intro.paused && !intro.ended) intro.paused()
+                else intro.play();
+            }
+        </script>
+
+
+                                                <!-- О КОМПАНИИ -->
+
+        <section id='a1'><h1>О компании</h1></section>
+
+        <section class='about'>
+            <div>
+                <section>
+                    <img id='p1' class='fade' src='images/img1b.jpg'>
+                </section>
+            </div>
+        </section>
+
+        <script>
+            let i=1; let p=7;
+            function func() {
+                if (++i>p) i=1;
+                p1.style.opacity='0';
+                setTimeout('pic()',1000);
+
+                pic=() => {
+                    p1.src='images/img'+i+'b.jpg';
+                    p1.style.opacity='1';
+                    }
+            }
+            setTimeout('func();', 3000);
+        </script>
+
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

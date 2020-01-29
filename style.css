@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i&display=swap&subset=cyrillic');
+
+:root {
+    --icons-color:rgb(241, 147, 147);
+}
+
+html {
+    scroll-behavior: smooth; /*плавная прокрутка якарей*/
+}
+
+.start {animation: fadeIn 3s;}
+
+                @keyframes fadeIn {
+                    from {opacity:0.1}
+                    to {opacity:1}
+                }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.logo img {height:70%}
+
+header {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-auto-rows: 80px;
+    grid-gap: 3px;
+}
+
+header div {
+            /* border:1px solid; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+header span {
+    padding-right: 20px;
+    font-size:120%;
+    font-weight: 600;
+}
+
+header span:nth-child(1) {color:var(--icons-color); padding-top: 10px;}
+
+header span:nth-child(2) {color:rgb(255, 0, 0)}
+
+.tel, .srh {border-left: 1px solid #ccc}
+
+.srh input {
+    padding-left: 10px;
+    padding-top: 8px;
+    font-size: 14pt;
+    border: 1px solid var(--icons-color);
+}
+
+.srh button {
+    border:0;
+    background: #fff; /*none*/
+    color: var(--icons-color);
+}
+
+
+/* Меню */
+
+nav {
+    background: #ff9898;
+    border-top: 3px solid var(--icons-color);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    /* grid-auto-rows: 57px; */
+}
+
+nav a {
+    display:block;
+    width:100%;
+    height: 100%;
+    text-decoration: none;
+    color:#fff;
+    font-size:15pt;
+    text-align: center;
+    /* padding-top: 13px;
+    padding-bottom: 13px; */
+    transition: .5s;
+}
+
+nav a:hover {
+    background-color: rgb(165, 43, 43);
+}
+
+
+                    /* ВИДЕО */
+video {
+    cursor:pointer;
+}
+
+h1 {text-align: center; font-size: 200%;}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    grid-auto-rows: 530px;
+    grid-gap: 3px;
+}
+
+.about div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+                    /* ДЛЯ СЛАЙДЕРА */
+
+.about div img {
+    width:100%;
+}
+
+.fade {
+    transition: 1s;
+}
